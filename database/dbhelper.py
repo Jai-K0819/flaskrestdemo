@@ -19,5 +19,13 @@ def allCourses():
     conn.close()
     return courselist
 
+#Insert data into database
+def addCourses():
+    cur.execute("INSERT INTO COURSES(ID, NAME, FEES, DURATION) VALUES (2, 'PYTHON', 12000, 48)")
+    cur.execute("INSERT INTO COURSES(ID, NAME, FEES, DURATION) VALUES (3, 'AngularJS', 10000, 48)")
+    cur.execute("INSERT INTO COURSES(ID, NAME, FEES, DURATION) VALUES (4, 'DevOps', 15000, 48)")
+    conn.commit()
+    print ("Record added successfully")
+
 allCourses()
 print ("Operation done successfully");
